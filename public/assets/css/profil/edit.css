@@ -1,0 +1,314 @@
+main {
+    background-color: var(--violet) !important;
+    padding: 0 250px;
+}
+
+label {
+    color: #fff;
+}
+
+.main__editPersonnel,
+.main__editPassword {
+    background-color: var(--violetdark);
+    padding: 50px;
+    margin: 50px 0;
+    border-radius: 5px;
+}
+
+
+.main__editPersonnel__h2,
+.main__editPassword__h2,
+.main__deleteAccount__h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.main__editPersonnel__form,
+.main__editPassword__form {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.main__editPersonnel__form__success,
+.main__editPassword__form__success {
+    background-color: green;
+    color: #fff;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 16px;
+    height: 0;
+    overflow: hidden;
+    transition: all .5s cubic-bezier(0.6, -0.28, 0.98, -0.09);
+}
+
+.main__editPersonnel__form__success.active,
+.main__editPassword__form__success.active {
+    height: 100%;
+    padding: 10px;
+}
+
+.main__editPersonnel__form__nickname,
+.main__editPersonnel__form__email,
+.main__editPassword__form__currentPassword,
+.main__editPassword__form__newPassword,
+.main__editPassword__form__retypePassword {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.main__editPersonnel__form__nickname input,
+.main__editPersonnel__form__email input,
+.main__editPassword__form__currentPassword input,
+.main__editPassword__form__newPassword input,
+.main__editPassword__form__retypePassword input {
+    outline: none;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    color: black;
+    font-size: 16px;
+}
+
+.main__editPassword__form__currentPassword .error,
+.main__editPassword__form__newPassword .error,
+.main__editPassword__form__retypePassword .error {
+    display: none;
+}
+
+.main__editPassword__form__currentPassword .error.active,
+.main__editPassword__form__newPassword .error.active,
+.main__editPassword__form__retypePassword .error.active {
+    display: block;
+}
+
+
+.main__editPersonnel__form__submit,
+.main__editPassword__form__submit {
+    width: 200px;
+    background-color: var(--yellow);
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    padding: 10px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: all .1s linear;
+    color: #fff;
+}
+
+.main__editPersonnel__form__submit:disabled,
+.main__editPassword__form__submit:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.main__editPersonnel__form__submit:not(:disabled):hover,
+.main__editPassword__form__submit:not(:disabled):hover {
+    transform: translateY(-5px);
+}
+
+.main__deleteAccount {
+    background-color: var(--violetdark);
+    padding: 50px;
+    margin: 50px 0;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.main__deleteAccount__left__p {
+    color: #fff;
+}
+
+.main__deleteAccount__right button {
+    background-color: red;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    padding: 10px;
+    cursor: pointer;
+    color: #fff;
+    width: 200px;
+}
+
+.main__popup {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.486);
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 100%;
+    z-index: -9999;
+    opacity: 0;
+    transition: opacity .3s linear;
+}
+
+.main__popup.active {
+    opacity: 1;
+    z-index: 9999;
+}
+
+.main__popup__content {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--violetdark);
+    padding: 50px;
+    border-radius: 10px;
+    width: 700px;
+}
+
+.main__popup__content h2 {
+    color: #fff;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.main__popup__content p {
+    color: #fff;
+    font-size: 16px;
+}
+
+.main__popup__content__form {
+    margin-top: 10px;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.main__popup__content__form__password {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.main__popup__content__form__password input {
+    outline: none;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    color: black;
+    font-size: 16px;
+}
+
+.main__popup__content__form__password .error {
+    display: none;
+}
+
+.main__popup__content__form__password .error.active {
+    display: block;
+}
+
+.main__popup__content__form__action {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+.main__popup__content__form__action .cancel {
+    background-color: red;
+    color: #fff;
+    border-radius: 5px;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    width: 150px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.main__popup__content__form__action .delete {
+    background-color: var(--yellow);
+    color: #fff;
+    border-radius: 5px;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    width: 150px;
+    cursor: pointer;
+    transition: all .1s linear;
+}
+
+.main__popup__content__form__action .delete:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+@media screen and (max-width: 1400px) {
+    main {
+        padding: 50px 100px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .main__deleteAccount {
+        flex-direction: column;
+        align-items: start;
+        gap: 20px;
+    }
+
+    .main__popup__content {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+
+    .main__editPersonnel__form,
+    .main__editPassword__form {
+        width: 100%;
+    }
+
+    .main__editPersonnel,
+    .main__editPassword,
+    .main__deleteAccount {
+        padding: 50px 30px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    main {
+        padding: 50px 30px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .main__popup__content {
+        width: 80%;
+        padding: 50px 30px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+
+    .main__editPersonnel__h2,
+    .main__editPassword__h2,
+    .main__deleteAccount__h2,
+    .main__deleteAccount__left__p,
+    .main__popup__content h2,
+    .main__popup__content p {
+        text-align: center;
+    }
+
+    .main__editPersonnel__form__submit,
+    .main__editPassword__form__submit,
+    .main__deleteAccount__right,
+    .main__deleteAccount__right button,
+    .main__popup__content__form {
+        width: 100%;
+    }
+
+    .main__popup__content {
+        top: 25%;
+    }
+}

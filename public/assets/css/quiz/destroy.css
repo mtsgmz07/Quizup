@@ -1,0 +1,30 @@
+main {
+    padding: 50px 250px;
+}
+
+.main__waiting {
+    margin-top: 40px;
+    background-color: var(--violetdark);
+    padding: 20px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.main__waiting {
+    text-align: center;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.main__waiting h2 {
+    font-size: 70px;
+}
+
+.main__waiting p {
+    font-size: 20px;
+}

@@ -1,0 +1,51 @@
+main {
+    padding: 50px 250px;
+}
+
+.main__waiting {
+    margin-top: 40px;
+    background-color: var(--violetdark);
+    padding: 20px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.main__waiting {
+    text-align: center;
+    color: #fff;
+}
+
+.main__waiting h2 {
+    font-size: 70px;
+}
+
+.main__nickname {
+    background-color: var(--violetdark);
+    color: #fff;
+    font-size: 18px;
+    margin: auto;
+    width: 200px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 0 0 5px 5px;
+}
+
+@media screen and (max-width: 1400px) {
+    main {
+        padding: 50px 100px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    main {
+        padding: 50px 30px;
+    }
+
+    .main__waiting h2 {
+        font-size: 50px;
+    }
+
+}

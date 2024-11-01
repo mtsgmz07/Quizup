@@ -1,0 +1,96 @@
+main {
+    background-color: var(--violet);
+    padding: 0 250px;
+}
+
+.main__difficult {
+    padding: 50px 0;
+}
+
+.main__difficult h2 {
+    font-size: 40px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.main__difficult__manager {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, auto));
+    gap: 20px;
+}
+
+.main__difficult__manager__container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.main__difficult__manager__container__button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    opacity: 0;
+    z-index: 999;
+    transition: all .2s linear;
+    width: 170px;
+}
+
+.main__difficult__manager__container__button a,
+.main__difficult__manager__container__button button {
+    font-size: 30px;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.main__difficult__manager__container__button .play {
+    background-color: var(--yellow);
+}
+
+.main__difficult__manager__container__button form {
+    width: 100%;
+}
+
+.main__difficult__manager__container__button .favorite {
+    background-color: var(--violet);
+    width: 100%;
+}
+
+.main__difficult__manager__container:hover .main__difficult__manager__container__button {
+    opacity: 1;
+}
+
+.main__difficult__manager__container:hover img {
+    filter: blur(2px);
+}
+
+.main__difficult__manager__container img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: filter .1s linear;
+}
+
+@media screen and (max-width: 1400px) {
+    main {
+        padding: 0px 100px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    main {
+        padding: 0px 30px;
+    }
+}

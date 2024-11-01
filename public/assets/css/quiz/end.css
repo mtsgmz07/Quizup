@@ -1,0 +1,54 @@
+main {
+    padding: 150px 250px;
+}
+
+h2,
+h1,
+.backhome {
+    text-align: center;
+    margin: auto;
+}
+
+h1 {
+    font-size: 70px;
+    color: #fff;
+}
+
+h2 {
+    font-size: 100px;
+    color: #fff;
+}
+
+.backhome {
+    display: flex;
+    justify-content: center;
+    background-color: var(--yellow);
+    text-align: center;
+    color: #fff;
+    width: 200px;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+@media screen and (max-width: 1400px) {
+    main {
+        padding: 0px 100px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    main {
+        padding: 150px 30px;
+    }
+
+    h1 {
+        font-size: 30px;
+        color: #fff;
+    }
+
+    h2 {
+        font-size: 60px;
+        color: #fff;
+    }
+}

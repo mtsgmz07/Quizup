@@ -1,0 +1,108 @@
+main {
+    padding: 150px 250px;
+}
+
+.main__code {
+
+    width: 300px;
+    margin: auto;
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+    justify-content: center;
+}
+
+.main__code h1 {
+    font-size: 40px;
+    background-color: var(--violetdark);
+    padding: 20px 30px;
+    border-radius: 5px 5px 0 0;
+}
+
+.main__code i {
+    background-color: var(--yellow);
+    padding: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.main__game {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: var(--violetdark);
+    padding: 30px;
+    border-radius: 5px;
+}
+
+.main__game__action {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+.main__game__action button {
+    color: #fff;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.main__game__action .launch {
+    background-color: var(--yellow);
+}
+
+.main__game__action .cancel {
+    background-color: red;
+}
+
+.main__game__managers {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, auto));
+    gap: 20px;
+}
+
+.main__game__managers__user {
+    background-color: var(--violet);
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    padding: 15px;
+}
+
+
+@media screen and (max-width: 1400px) {
+    main {
+        padding: 150px 100px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    main {
+        padding: 150px 30px;
+    }
+
+    .main__game__action {
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .main__game__action button {
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+    .main__code i {
+        display: none;
+    }
+}

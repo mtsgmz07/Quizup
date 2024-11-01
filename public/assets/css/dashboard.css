@@ -1,0 +1,178 @@
+main {
+    background-color: var(--violet);
+    padding: 50px 250px 0 250px;
+}
+
+.main__welcome {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main__welcome__h1 {
+    font-size: 40px;
+    margin-bottom: 50px;
+    color: #fff;
+    text-align: center;
+}
+
+.main__welcome__form {
+    width: 150px;
+}
+
+.main__welcome__form button {
+    background-color: red;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    padding: 10px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.main__manageProfil {
+    margin: 40px 0;
+    background-color: var(--violetdark);
+    padding: 20px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main__manageProfil__right a {
+    background-color: var(--yellow);
+    border-radius: 5px;
+    color: #fff;
+    font-size: 20px;
+    padding: 10px;
+}
+
+.main__manageProfil__left h2 {
+    font-size: 30px;
+    color: #fff;
+}
+
+.main__manageProfil__left p {
+    color: #fff;
+}
+
+.main__manageHistoryGame {
+    padding: 10px 0 20px 0;
+}
+
+.main__manageHistoryGame__h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.main__manageHistoryGame__any {
+    text-align: center;
+    font-size: 20px;
+    color: #fff;
+    padding: 100px 0;
+}
+
+.main__manageHistoryGame__manager {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, auto));
+    gap: 20px;
+}
+
+.main__manageHistoryGame__manager__container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.main__manageHistoryGame__manager__container__button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    opacity: 0;
+    z-index: 999;
+    transition: all .2s linear;
+    width: 170px;
+}
+
+.main__manageHistoryGame__manager__container__button a,
+.main__manageHistoryGame__manager__container__button button {
+    font-size: 30px;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.main__manageHistoryGame__manager__container__button .play {
+    background-color: var(--yellow);
+}
+
+.main__manageHistoryGame__manager__container__button form {
+    width: 100%;
+}
+
+.main__manageHistoryGame__manager__container__button .favorite {
+    background-color: var(--violet);
+    width: 100%;
+}
+
+.main__manageHistoryGame__manager__container:hover .main__manageHistoryGame__manager__container__button {
+    opacity: 1;
+}
+
+.main__manageHistoryGame__manager__container:hover img {
+    filter: blur(2px);
+}
+
+.main__manageHistoryGame__manager__container img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: filter .1s linear;
+}
+
+@media screen and (max-width: 1400px) {
+    main {
+        padding: 50px 100px;
+    }
+}
+
+@media screen and (max-width: 1040px) {
+    .main__welcome {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .main__h1 {
+        text-align: center;
+    }
+
+    .main__manageProfil {
+        align-items: start;
+        flex-direction: column;
+        gap: 25px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    main {
+        padding: 50px 30px;
+    }
+}
